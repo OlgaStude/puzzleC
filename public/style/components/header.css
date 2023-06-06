@@ -1,0 +1,106 @@
+header{
+    min-width: 1920px;
+    max-width: 100%;
+    background-color: #2399CC;
+    padding: 0px 110px;
+    font-weight: 700;
+    font-size: 30px;
+}
+header a, header a:visited{
+    color: #fff;
+    text-decoration: none;
+}
+    #up_part{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 18px;
+        position: relative;
+    }
+        #up_part img{
+            width: 133px;
+            height: 133px;
+        }
+        #up_part nav{
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+        }
+        #up_part nav a{
+            margin-left: 39px;
+            height: 30px;
+        }
+    #mid_part{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 22px;
+        padding-left: 170px;
+        padding-right: 10px;
+    }
+        #search_bar{
+            position: relative;
+            height: 55px;
+            width: 960px;
+            margin-top: 7px;
+        }
+            #search_bar input{
+                border: 0;
+                height: 55px;
+                width: 100%;
+                border-radius: 30px;
+                padding-left: 20px;
+                font-size: 25px;
+            }
+            #search_bar img{
+                position: absolute;
+                z-index: 10;
+                border-left: 1px solid #2399CC;
+                padding-left: 14px;
+                padding-top: 3px;
+                padding-bottom: 3px;
+                height: 39px;
+                right: 18px;
+                top: 7px;
+                background-color: #fff;
+            }
+            #mid_part img{
+                margin-left: 46px;
+            }
+    #down_part{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 65px;
+        margin-bottom: 10px;
+    }
+        #down_part div a{
+            margin-left: 33px;
+        }
+
+
+footer{
+    width: 1920px;
+    height: 537px;
+    background-color: #2399CC;
+    padding: 72px 110px;
+    color: white;
+    font-size: 34px;
+    font-weight: 700;
+    display: flex;
+    justify-content: space-between;
+    border-top: 2px solid #2399CC;
+}
+    footer p{
+        margin-bottom: 50px;
+        cursor: pointer;
+    }
+    #last_footer{
+        text-align: right;
+        margin-top: 30px;
+    }
+        #last_footer img{
+            width: 74px;
+            height: 74px;
+            margin-left: 64px;
+            cursor: pointer;
+            margin-bottom: 76px;
+        }
