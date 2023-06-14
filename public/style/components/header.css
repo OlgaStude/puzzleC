@@ -6,6 +6,11 @@ header{
     font-weight: 700;
     font-size: 30px;
 }
+#login_nav{
+    cursor: pointer;
+    width: 71px;
+    height: 69px;
+}
 header a, header a:visited{
     color: #fff;
     text-decoration: none;

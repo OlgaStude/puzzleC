@@ -1,0 +1,188 @@
+@import url('components/clear.css');
+@import url('components/header.css');
+@import url('components/login_reg.css');
+
+#up_section{
+    padding: 105px 110px;
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 8px solid #2399CC;
+}
+    #products_tittle>h1{
+        font-size: 40px;
+        margin-bottom: 50px;
+    }
+        .product{
+            display: flex;
+            justify-content: space-between;
+            width: 991px;
+            margin-bottom: 30px;
+        }
+        .product a, .product a:visited{
+            color: black;
+            text-decoration: none;
+        }
+            .product img{
+                width: 323px;
+                height: 323px;
+            }
+            .product_info_title{
+                text-align: left;
+                width: 597px;
+                margin-top: 100px;
+            }
+            .product_info_title h1{
+                font-size: 34px;
+                margin-bottom: 10px;
+            }
+            .product_info_title p{
+                font-size: 24px;
+                font-weight: 700;
+            }
+                .product_info_price{
+                    display: flex;
+                    justify-content: space-between;
+                    width: 100%;
+                    margin-top: 39px;
+                }
+                    .items_ammount{
+                        width: 152px;
+                        height: 49px;
+                        border: 4px solid #2399CC;
+                        border-radius: 10px;
+                        display: flex;
+                        justify-content: space-between;
+                        padding: 1px;
+                    }
+                        .items_ammount span{
+                            display: block;
+                            text-align: center;
+                            font-size: 30px;
+                            font-weight: 700;
+                        }
+                        .less, .more{
+                            width: 43px;
+                            color: #E14257;
+                            cursor: pointer;
+                        }
+                        .less{
+                            border-right: 1px solid #2399CC;
+                        }
+                        .more{
+                            border-left: 1px solid #2399CC;
+                        }
+                    .product_price{
+                        display: flex;
+                        column-gap: 10px;
+                        margin-top: 5px;
+                    }
+                    .product_price p{
+                        font-size: 34px;
+                        font-weight: 700;
+                    }
+                    .product_price img{
+                        width: 29px;
+                        height: 31px;
+                        margin-top: 5px;
+                    }
+
+    #price_tottal{
+        width: 584px;
+        height: 295px;
+        border-radius: 30px;
+        background-color: #2399CC;
+        overflow: visible;
+        color: #fff;
+        padding: 39px 49px;
+        position: relative;
+        margin-bottom: 100px;
+    }
+        #price_tottal>div{
+            display: flex;
+            justify-content: space-between;
+        }
+        #product_price{
+            margin-bottom: 10px;
+        }
+        #product_price, #delivery_price{
+            font-size: 28px;
+        }
+        .product_price_money, .tottal_price_money{
+            display: flex;
+            column-gap: 10px;
+        }
+        .product_price_money img{
+            width: 23px;
+            height: 25px;
+            margin-top: 5px;
+        }
+        #tottal_price{
+            font-size: 40px;
+            font-weight: 700;
+            margin-top: 50px;
+        }
+            #tottal_price img{
+                width: 34px;
+                height: 37px;
+                margin-top: 7px;
+            }
+    #price_tottal button{
+        width: 338px;
+        height: 68px;
+        color: #fff;
+        background-color: #E14257;
+        font-size: 30px;
+        font-weight: 700;
+        border-radius: 20px;
+        border: 7px solid rgb(225, 66, 87, 0);
+        position: absolute;
+        bottom: -30px;
+        right: 39px;
+        cursor: pointer;
+        transition-duration: 0.5s;
+    }
+    #price_tottal button:hover{
+        color: #E14257;
+        background-color: #fff;
+        border: 7px solid #E14257;
+    }
+
+
+#user_info{
+    padding: 60px 110px;
+}
+    #user_info>h1{
+        font-size: 44px;
+        margin-bottom: 46px;
+    }
+    #user_info_wrapper{
+        display: flex;
+        justify-content: space-between;
+    }
+        #user_info_wrapper h1{
+            font-size: 34px;
+            margin-bottom: 26px;
+        }
+        #user_info_wrapper input{
+            border-radius: 10px;
+            height: 53px;
+            font-size: 20px;
+            color: #8E8E8E;
+            padding-left: 20px;
+        }
+        .adress_up, .adress_down{
+            display: flex;
+            justify-content: space-between;
+            width: 750px;
+            margin-bottom: 32px;
+        }
+            .long{
+                width: 346px;
+                border: 4px solid #2399CC;
+            }
+            .short{
+                width: 219px;
+                border: 4px solid #2399CC;
+            }
+        

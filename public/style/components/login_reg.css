@@ -1,0 +1,79 @@
+#login_register{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0, 0.5);
+    z-index: 100;
+    display: none;
+}
+#login_register p{
+    text-align: center;
+    color: #fff;
+    font-size: 24px;
+    text-decoration: underline;
+    margin-top: 20px;
+}
+    #login_register form{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 102;
+    }
+    #register{
+        width: 703px;
+        height: 823px;
+        background-color: #2399CC;
+        border-radius: 30px;
+        padding-top: 48px;
+        display: none;
+    }
+        #login_register h1{
+            font-size: 40px;
+            color: #fff;
+            text-align: center;
+            margin-bottom: 34px;
+        }
+        #login_register input{
+            width: 558px;
+            height: 68px;
+            font-size: 20px;
+            padding-left: 25px;
+            margin-left: 70px;
+            margin-bottom: 61px;
+            border-radius: 10px;
+        }
+        #login_register button{
+            width: 558px;
+            height: 68px;
+            color: #fff;
+            font-size: 30px;
+            font-weight: 700;
+            background-color: #E14257;
+            transition-duration: 0.5s;
+            cursor: pointer;
+            border: 7px solid rgb(225, 66, 87, 0);
+            margin-left: 70px;
+            border-radius: 10px;
+        }
+        #login_register button:hover{
+            color: #E14257;
+            border: 7px solid #E14257;
+            background-color: #fff;
+        }
+    #login{
+        width: 703px;
+        height: 570px;
+        background-color: #2399CC;
+        border-radius: 30px;
+        padding-top: 48px;
+    }
+    #exit{
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }

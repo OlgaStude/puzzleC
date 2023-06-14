@@ -4,14 +4,76 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css" integrity="sha512-OTcub78R3msOCtY3Tc6FzeDJ8N9qvQn1Ph49ou13xgA9VsH9+LRxoFU6EqLhW4+PKRfU+/HReXmSZXHEkpYoOA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="{{ asset('owlcarousel/owl.theme.default.min.css')}}">
+    <link rel="stylesheet" href="{{ asset('owlcarousel/owl.carousel.min.css')}}">
     <link href="{{ asset('style/mainpage.css') }}" rel="stylesheet">
-    <title>Document</title>
+    @error('name')
+    <style>
+        #name{
+            border: 7px solid #E14257;
+        }
+        #login_register, #register{
+            display: block;
+        }
+    </style>
+    @enderror
+    @error('email')
+    <style>
+        #mail{
+            border: 7px solid #E14257;
+        }
+        #login_register, #register{
+            display: block;
+        }
+    </style>
+    @enderror
+    @error('password')
+    <style>
+        #password{
+            border: 7px solid #E14257;
+        }
+        #login_register, #register{
+            display: block;
+        }
+    </style>
+    @enderror
+    @error('password_r')
+    <style>
+        #password_r{
+            border: 7px solid #E14257;
+        }
+        #login_register, #register{
+            display: block;
+        }
+    </style>
+    @enderror
+    <title>Главная</title>
 </head>
 <body>
 @include('components.header')
 
+    <section id="login_register">
+        <form action="{{ route('login') }}" method="post" id="login">
+        @csrf    
+            <h1>Вход</h1>
+            <input type="text" placeholder="Почта" name="email" id="mail">
+            <input type="text" placeholder="Пароль" name="password" id="password">
+            <button type="submit">Войти</button>
+            <p id="reg_switch">Зарегистрироваться?</p>
+        </form>
+        <form action="{{ route('registration') }}" method="post" id="register">
+        @csrf
+            <h1>Регистрация</h1>
+            <input type="text" placeholder="Имя" name="name" id="name">
+            <input type="text" placeholder="Почта" name="email" id="mail">
+            <input type="text" placeholder="Пароль" name="password" id="password">
+            <input type="text" placeholder="Повтор пароля" name="password_r" id="password_r">
+            <button type="submit">Зарегистрироваться</button>
+            <p id="login_switch">Войти?</p>
+        </form>
+        
+        <div id="exit"></div>
+    </section>
     <section id="slider">
         <div class="owl-carousel">
             <div class="slider__item first">
@@ -113,9 +175,41 @@
         @endforeach
         <button>Каталог</button>
     </section>
+    <section id="videos">
+        <div id="videos_title">
+            <h1>Обзоры</h1>
+        </div>
+        <div id="videos_container">
+            <div class="video">
+                <div class="blackout"></div>
+                <img class="video_preview" src="{{ asset('storage/videos/video_1.webp') }}" alt="">
+            </div>
+            <div class="video">
+                <div class="blackout"></div>
+                <img class="video_preview" src="{{ asset('storage/videos/video_2.jpg') }}" alt="">
+            </div>
+        </div>
+        <button>Все обзоры</button>
+    </section>
+    <div id="brands">
+        <div id="brands_title">
+            <h1>Бренды</h1>
+        </div>
+        <div id="brands_container">
+            <img src="{{ asset('storage/imgs/brand_logo_1.png') }}" alt="">
+            <img src="{{ asset('storage/imgs/brand_logo_2.png') }}" alt="">
+            <img src="{{ asset('storage/imgs/brand_logo_3.png') }}" alt="">
+            <img src="{{ asset('storage/imgs/brand_logo_4.png') }}" alt="">
+            <img src="{{ asset('storage/imgs/brand_logo_5.png') }}" alt="">
+            <img src="{{ asset('storage/imgs/brand_logo_6.png') }}" alt="">
+            <img src="{{ asset('storage/imgs/brand_logo_7.png') }}" alt="">
+            <img src="{{ asset('storage/imgs/brand_logo_8.png') }}" alt="">
+        </div>
+    </div>
+@include('components.footer')
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="{{ asset('owlcarousel/jquery.min.js')}}"></script>
+    <script src="{{ asset('owlcarousel/owl.carousel.min.js')}}"></script>
     <script>
         $('.owl-carousel').owlCarousel({
             center: true,
@@ -143,6 +237,21 @@
             $(this).parent().prev().children().attr("src",$(this).data('image'));
             $(this).siblings().removeClass('active');
             $(this).addClass('active');
+        });
+
+        $('#login_nav').click(function(){
+            $('#login_register').show();
+        })
+        $('#exit').click(function(){
+            $('#login_register').hide();
+        })
+        $('#login_switch').click(function(){
+            $('#register').hide();
+            $('#login').show();
+        });
+        $('#reg_switch').click(function(){
+            $('#login').hide();
+            $('#register').show();
         });
     </script>
 </body>
